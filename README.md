@@ -63,6 +63,22 @@ if (testConfig.testIndex) testCases.push(indexTestConfig);
 
 module.exports={testConfig, testCases};
 ```
+Your controllerIndex file might look like this:
+```JavaScript
+module.exports= {
+  endpoint: 'http://localhost:3000/api/your-endpoint',
+  method: 'POST',
+  payload:{
+        // Define request payload for POST/PUT requests here
+  },
+  expectedResponse: {
+    status: 200,
+    body:{
+        // define your attributes here
+    }
+  }
+};
+```
 ### Contributing
 
 If you'd like to contribute to API Genie, please fork the repository and submit a pull request with your enhancements or bug fixes.
