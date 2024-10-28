@@ -53,17 +53,15 @@ npx jest test.spec.js
 Here’s a sample snippet of what your testConfig.js might look like:
 
 ```JavaScript
-module.exports = {
-  apiEndpoint: 'http://localhost:3000/api/your-endpoint',
-  method: 'GET',
-  expectedStatusCode: 200,
-  expectedResponse: {
-    // Define expected response structure here
-  },
-  payload: {
-    // Define request payload for POST/PUT requests here
-  },
-};
+const indexTestConfig = require('path-to-your-controllerIndex');
+
+const testConfig={
+    testIndex: true
+}
+const testCases = [];
+if (testConfig.testIndex) testCases.push(indexTestConfig);
+
+module.exports={testConfig, testCases};
 ```
 ### Contributing
 
