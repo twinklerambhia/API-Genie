@@ -1,2 +1,2 @@
 # API-Genie
-This is an API Genie, your friendly genie for swift API testing!
+This is API Genie, your friendly genie for swift API testing!
